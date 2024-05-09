@@ -1,9 +1,9 @@
 from random import randint
 import time
 
-armas_raras = ["arma1", "arma2", "arma3", "arma4", "arma5"]
-armas_epicas = ["arma1", "arma2", "arma3", "arma4", "arma5"]
-armas_lendarias = ["arma1", "arma2", "arma3", "arma4", "arma5"]
+armaduras_raras = ["armadura1", "armadura2", "armadura3", "armadura4", "armadura5"]
+armaduras_epicas = ["armadura1", "armadura2", "armadura3", "armadura4", "armadura5"]
+armaduras_lendarias = ["armadura1", "armadura2", "armadura3", "armadura4", "armadura5"]
 opcoes = [0, 1, 2, 3]
 opcoes_venda = [1, 2, 3, 4]
 arcanum = None
@@ -62,7 +62,7 @@ while escolha_venda != 4:
         time.sleep(0.5)
 
 if arcanum >= 4:
-    print('\033[1;31mAgora vamos para as armas\033[0m')
+    print('\033[1;31mAgora vamos para as armaduras\033[0m')
     print(f'Você tem {arcanum} Arcs')
     time.sleep(0.5)
     print('[1] Para Raro | 4 Arcs')
@@ -83,37 +83,37 @@ while escolha not in opcoes:
     
 if escolha == 1:
     if arcanum >= 4:
-        num_aleatorio = randint(0, len(armas_raras) - 1)
-        arma = armas_raras[num_aleatorio]
+        num_aleatorio = randint(0, len(armaduras_raras) - 1)
+        armadura = armaduras_raras[num_aleatorio]
         arcanum -= 4
-        print(f'Sua arma é {arma} e agora você tem {arcanum} arcs')
+        print(f'Sua armadura é {armadura} e agora você tem {arcanum} arcs')
         time.sleep(0.5)
         compra = 1
     else:
         print('Não tem Arcanums suficiente')
 if escolha == 2:
     if arcanum >= 6:
-        num_aleatorio = randint(0, len(armas_epicas) - 1)
-        arma = armas_epicas[num_aleatorio]
+        num_aleatorio = randint(0, len(armaduras_epicas) - 1)
+        armadura = armaduras_epicas[num_aleatorio]
         arcanum -= 6
-        print(f'Sua arma é {arma} e agora você tem {arcanum} arcs')
+        print(f'Sua armadura é {armadura} e agora você tem {arcanum} arcs')
         time.sleep(0.5)
         compra = 1
     else:
         print('Não tem Arcanums suficiente')
 if escolha == 3:
     if arcanum >= 8:
-        num_aleatorio = randint(0, len(armas_lendarias) - 1)
-        arma = armas_lendarias[num_aleatorio]
+        num_aleatorio = randint(0, len(armaduras_lendarias) - 1)
+        armadura = armaduras_lendarias[num_aleatorio]
         arcanum -= 8
-        print(f'Sua arma é {arma} e agora você tem {arcanum} arcs')
+        print(f'Sua armadura é {armadura} e agora você tem {arcanum} arcs')
         time.sleep(0.5)
         compra = 1
     else:
         print('Não tem Arcanums suficiente')
 
 if compra == 1:
-    print(f'\033[1;31mDesfrute a sua {arma}, até outro dia\033[0m')
+    print(f'\033[1;31mDesfrute a sua {armadura}, até outro dia\033[0m')
 else:
     print(f'\033[1;31mTe faltam {4 - arcanum} arcanums para você realizar uma compra, até um outro dia\033[0m')
         
